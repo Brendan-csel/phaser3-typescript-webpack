@@ -2,7 +2,7 @@ import 'phaser';
 
 import TestScene from './scenes/PlayScene';
 
-const config:GameConfig = {
+const config : Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
     parent: 'content',
     width: 640,
@@ -11,7 +11,7 @@ const config:GameConfig = {
     backgroundColor: "#EDEEC9",
     scene: [
       TestScene
-    ]
+    ] 
 };
 
 new Phaser.Game(config);

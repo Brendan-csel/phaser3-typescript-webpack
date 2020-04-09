@@ -15,15 +15,15 @@ class TestScene extends Phaser.Scene {
 	}
 
 	create() {
-		var map:Phaser.Tilemaps.Tilemap = this.make.tilemap({ key: 'map' });
-		var tileset:Phaser.Tilemaps.Tileset = map.addTilesetImage('Desert');
-		var layer:Phaser.Tilemaps.StaticTilemapLayer = map.createStaticLayer(0, tileset, 0, 0);
+		var map = this.make.tilemap({ key: 'map' });
+		var tileset = map.addTilesetImage('Desert');
+		var layer = map.createStaticLayer(0, tileset, 0, 0);
 
 		this.player = this.add.sprite(100, 100, 'player');
 		this.cursors = this.input.keyboard.createCursorKeys();
 
 		this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-    this.cameras.main.startFollow(this.player, false);
+        this.cameras.main.startFollow(this.player, false);
 	}
 
 	update(time: number, delta:number) {
